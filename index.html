@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Framework</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <nav class="navbar sticky">
+        <ul>
+            <li><a class="title" heref="#">TITLE</a></li>
+            <li><a href="#">Home</a>
+                <ul class="dropdown">
+                    <li><a href="#">Sub-1</a></li>
+                    <li><a href="#">Sub-2</a></li>
+                    <li><a href="#">Sub-3</a></li>
+    
+                </ul>
+            </li>
+            <li><a href="#">Features</a>
+                <ul class="dropdown">
+                    <li><a href="#">Sub-1</a></li>
+                    <li><a href="#">Sub-2</a></li>
+                    <li><a href="#">Sub-3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">About</a></li>
+        </ul>
+    
+        <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Git</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+    
+    <br>
+    <section>
+        <section_title>Welcome</section_title>
+        <hr class="solid">
+        <p>Welcome to my custom framework. In order to style your project with this theme add this
+            framework's CSS into your project and link it to your HTML project within the head tag and assign the appropriate tag to start getting it styled, and if necessary, provide the class according to
+            this
+            framework. Also to get the Didact Gothi font used in this framework for your project link to the Google Fonts API to your HTML file like below.</p>
+        <div>
+            <pre>
+    &#x3C;link rel=&#x22;stylesheet&#x22; type=&#x22;text/css&#x22; href=&#x22;styles.css&#x22; /&#x3E;
+    &#x3C;link href=&#x22;https://fonts.googleapis.com/css2?family=Didact+Gothic&#x26;display=swap&#x22; rel=&#x22;stylesheet&#x22;&#x3E;
+            </pre>
+        </div>
+    </section>
+
+    <!-- customcounter -->
+    <section>
+        <section_title>Custom Counter</section_title>
+        <hr class="solid">
+        <p>You can use this custom counter written as a web component. You can specify its starting value,
+           min value, step value, and max value. Don't forget to add JS script code within your HTML.
+           In the below example the starting value is 20, min is 2, max is 50, and each step goes up/down by 2.
+        </p>
+
+        <custom-counter value="20" min="2" max="50" step="2"></custom-counter>
+
+        <script src="./custom-counter.js"></script>
+        <script>
+            document.querySelector('custom-counter').addEventListener('change', (e) => {
+                console.log('custom counter changed')
+                console.log(e.target._value)
+        })
+        </script>
+
+        <div>
+            <pre>
+    &#x3C;custom-counter value=&#x22;20&#x22; min=&#x22;2&#x22; max=&#x22;50&#x22; step=&#x22;2&#x22;&#x3E;&#x3C;/custom-counter&#x3E;
+
+    &#x3C;script src=&#x22;./custom-counter.js&#x22;&#x3E;&#x3C;/script&#x3E;
+    &#x3C;script&#x3E;
+        document.querySelector(&#x27;custom-counter&#x27;).addEventListener(&#x27;change&#x27;, (e) =&#x3E; {})
+    &#x3C;/script&#x3E;
+            </pre>
+        </div>
+
+    </section>
+
+   
+
+
+    <section>
+        <section_title>Headings</section_title>
+        <hr class="solid">
+        <p>These are the various headings you can use</p>
+
+        <div>
+            <h1>H1. Heading 1 Title</h1>
+            <h2>H2. Heading 2 Title</h2>
+            <h3>H3. Heading 3 Title</h3>
+            <h4>H4. Heading 4 Title</h4>
+            <h5>H5. Heading 5 Title</h5>
+            <h6>H6. Heading 6 Title</h6>
+        </div>
+        <div>
+            <pre>
+    &#x3C;h1&#x3E;&#x3C;/h1&#x3E;
+    &#x3C;h2&#x3E;&#x3C;/h2&#x3E;
+    &#x3C;h3&#x3E;&#x3C;/h3&#x3E;
+    &#x3C;h4&#x3E;&#x3C;/h4&#x3E;
+    &#x3C;h5&#x3E;&#x3C;/h5&#x3E;
+    &#x3C;h6&#x3E;&#x3C;/h6&#x3E;
+    </pre>
+        </div>
+
+    </section>
+
+    <section>
+        <section_title>Nav Bar</section_title>
+        <hr class="solid">
+        <p>The nav bar looks like the nav bar shown above</p>
+
+        <div>
+            <pre>
+    &#x3C;nav class=&#x22;navbar sticky&#x22;&#x3E;
+        &#x3C;ul&#x3E;
+            &#x3C;li&#x3E;&#x3C;a class=&#x22;title&#x22; heref=&#x22;#&#x22;&#x3E;TITLE&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+            &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Home&#x3C;/a&#x3E;
+                &#x3C;ul class=&#x22;dropdown&#x22;&#x3E;
+                    &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Sub-1&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                    &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Sub-2&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                    &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Sub-3&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+
+                &#x3C;/ul&#x3E;
+            &#x3C;/li&#x3E;
+            &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Features&#x3C;/a&#x3E;
+                &#x3C;ul class=&#x22;dropdown&#x22;&#x3E;
+                    &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Sub-1&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                    &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Sub-2&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                    &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Sub-3&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                &#x3C;/ul&#x3E;
+            &#x3C;/li&#x3E;
+            &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;About&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;/ul&#x3E;
+
+        &#x3C;ul&#x3E;
+            &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Contact Us&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+            &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Git&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;/ul&#x3E;
+    &#x3C;/nav&#x3E;
+        </pre>
+        </div>
+    </section>
+    <section>
+        <section_title>Buttons</section_title>
+        <hr class="solid">
+        <p>These are the various buttons you can use</p>
+
+        <div class="buttons-section">
+            <div>
+                <button>Success</button>
+                <button class="btn-alert">Alert</button>
+                <button class="btn-dark">Dark</button>
+            </div>
+
+            <div>
+                <pre>
+    &lt;button&gt;&lt;button&gt;
+    &lt;button class="btn-alert"&gt;&lt;button&gt;
+    &lt;button class="btn-dark"&gt;&lt;button&gt;
+        </pre>
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+        <section_title> Selectors</section_title>
+        <hr class="solid">
+        <p>These are the various selector styles you can use</p>
+
+        <div class="selectors">
+            <label class="checkbox">
+                <input type="checkbox">
+                <span>Activate?</span>
+            </label>
+
+            <label class="checkbox-check">
+                <input type="checkbox">
+                <span>CheckBox</span>
+            </label>
+
+            <label class="radio">
+                <input type="radio" name="choice">
+                <span>Radio Choice 1</span>
+            </label>
+
+            <label class="radio">
+                <input type="radio" name="choice">
+                <span>Radio Choice 2</span>
+            </label>
+        </div>
+
+        <pre>
+    &#x3C;div class=&#x22;selectors&#x22;&#x3E;
+        &#x3C;label class=&#x22;checkbox&#x22;&#x3E;
+            &#x3C;input type=&#x22;checkbox&#x22;&#x3E;
+            &#x3C;span&#x3E;Activate?&#x3C;/span&#x3E;
+        &#x3C;/label&#x3E;
+
+        &#x3C;label class=&#x22;checkbox-check&#x22;&#x3E;
+            &#x3C;input type=&#x22;checkbox&#x22;&#x3E;
+            &#x3C;span&#x3E;CheckBox&#x3C;/span&#x3E;
+        &#x3C;/label&#x3E;
+
+        &#x3C;label class=&#x22;radio&#x22;&#x3E;
+            &#x3C;input type=&#x22;radio&#x22; name=&#x22;choice&#x22;&#x3E;
+            &#x3C;span&#x3E;Radio Choice 1&#x3C;/span&#x3E;
+        &#x3C;/label&#x3E;
+
+        &#x3C;label class=&#x22;radio&#x22;&#x3E;
+            &#x3C;input type=&#x22;radio&#x22; name=&#x22;choice&#x22;&#x3E;
+            &#x3C;span&#x3E;Radio Choice 2&#x3C;/span&#x3E;
+        &#x3C;/label&#x3E;
+    &#x3C;/div&#x3E;
+        </pre>
+
+    </section>
+
+    <section>
+        <section_title>Forms</section_title>
+        <hr class="solid">
+        <p>These are the forms stylings</p>
+
+        <form>
+            <label>Name</label>
+            <input type="text" placeholder="enter name" />
+            <label>Email</label>
+            <input type="email" placeholder="enter email" />
+            <label>Password</label>
+            <input type="password" placeholder="enter password" />
+            <label>Notes</label>
+            <textarea placeholder="notes"></textarea>
+            <input type="submit">
+        </form>
+
+        <div>
+            <pre>
+    &#x3C;form&#x3E;
+        &#x3C;label&#x3E;Name&#x3C;/label&#x3E;
+        &#x3C;input type=&#x22;text&#x22; placeholder=&#x22;enter name&#x22; /&#x3E;
+        &#x3C;input type=&#x22;submit&#x22;&#x3E;
+    &#x3C;/form&#x3E;        
+        </pre>
+        </div>
+
+    </section>
+
+    <!-- <div class="to-the-end"></div> -->
+
+
+
+</div>
+
+<div class="footer">
+
+    <ul>
+        <li><a heref="#">Link1</a></li>
+        
+        <li><a href="#">Link2</a> </li>
+    </ul>
+
+
+</div>
+
+
+</body>
+
+</html>
